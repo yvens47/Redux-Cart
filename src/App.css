@@ -1,0 +1,565 @@
+.bg-light-primary {
+  background: #264653;
+}
+
+.btn-custom-primary {
+  background: #864109;
+}
+
+.home-product-wrapper {
+  position: relative;
+  height: 160px;
+}
+
+.home-product-wrapper img {
+  height: 140px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.home-product p {
+  line-height: 15px;
+}
+.home-product p:first-child {
+  font-weight: 500;
+  color: #250a04;
+  font-size: 15px;
+}
+
+/*
+cart.css
+*/
+
+.cart-page-wrapper {
+  background: #eee;
+  min-height: 100vh;
+}
+.cart-wrapper {
+  background: white;
+}
+
+/*Auction */
+.auction_image {
+  border-right: solid 1px #eee;
+  padding: 30px;
+  position: relative;
+}
+
+.auction_details {
+  padding: 30px;
+}
+.auction_product {
+  width: 80%;
+  border: solid #eee 1px;
+  padding: 3px;
+  margin: 10px;
+  display: flex;
+  box-shadow: 0px 0px 1px 1px #dadada;
+}
+p.bids {
+  font-size: 12px;
+  display: flex;
+  flex-flow: column;
+}
+p.bids span {
+  font-size: 15px;
+  display: flex;
+}
+p.bids span:first-child {
+  color: red;
+}
+p.bids span:nth-child(2) {
+  color: #37963f;
+}
+.counts {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  border-radius: 50%;
+  font-size: smaller;
+  color: #7f7d7d;
+}
+span.like {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.MuiPaper-root.MuiCard-root.makeStyles-root-1.MuiPaper-elevation1.MuiPaper-rounded {
+  box-shadow: none;
+  border: solid 1px #eee;
+}
+
+/**
+ * The CSS shown here will not be introduced in the Quickstart guide, but shows
+ * how you can use CSS to style your Element's container.
+ */
+.StripeElement {
+  box-sizing: border-box;
+  width: 100%;
+
+  height: 40px;
+
+  padding: 10px 12px;
+
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: white;
+
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+.checkout {
+  width: 100%;
+  border: solid 1px #fff9f9;
+  background: #fffcfc;
+  padding: 10px;
+}
+
+.order-summary {
+  border: solid 1px #c7bfbf;
+  background: white;
+  padding: 10px;
+}
+
+.order-summary h1 {
+  color: #666;
+  font-size: 30px;
+  padding: 1px;
+  width: 94%;
+  display: block;
+  border-bottom: 1px solid #eee;
+  margin: 5px auto 10px auto;
+  padding: 10px 0;
+}
+.subtotal {
+  color: #b2b7b7;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.shipping {
+  color: #b2b7b7;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.shipping col:nth-child(2) {
+  text-align: right;
+}
+.total {
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 5px;
+  color: #666;
+}
+.order-summary .col:nth-child(2) {
+  text-align: right;
+}
+
+.cart-page-wrapper h1:nth-child(1) {
+  border-bottom: solid 1px #cecdcd;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: "Roboto", sans serif;
+  font-size: 40px;
+}
+.cart-page-wrapper h1:nth-child(1) span {
+  border-bottom: solid 3px #cecdcd;
+}
+.inc-dec {
+  background: white;
+  color: #666;
+  border: solid 1px #444;
+}
+.qty-input {
+  display: flex;
+}
+.qty-input input {
+  background: white;
+  border: solid 1px #dee2e6;
+  color: #666;
+  width: 50%;
+  padding: 10px;
+}
+
+.Hero {
+  background: #2a9d8f;
+  height: 450px;
+  position: relative;
+  left: 0;
+  width: 100%;
+}
+
+.show-pic {
+  width: 7%;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+
+.intro {
+  width: 50%;
+  position: absolute;
+  top: 130px;
+  left: 560px;
+  color: white;
+}
+.header-form {
+  width: 100%;
+}
+.header-form input {
+  width: 70%;
+  background: #d6d6d687;
+  border: solid #2222 1px;
+  color: white;
+}
+.header-form input:focus {
+  background: #d6d6d687;
+  border: solid #2222 1px;
+  box-shadow: none;
+}
+
+.category-image {
+  width: 100%;
+
+  height: 450px;
+}
+.category-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.subscribe {
+  background: #f4a261;
+  height: auto;
+}
+.subscribe .btn-custom-primary {
+  background: #864109;
+  border: solid 1px;
+  color: white;
+  font-weight: bold;
+}
+.subscribe h1 {
+  color: white;
+  font-size: 55px;
+}
+.latest-wraper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  background: white;
+}
+
+.latest-wraper img {
+  width: 100%;
+  height: 100%;
+}
+.latest-row {
+  background: white;
+  height: 110px;
+  width: 100%;
+  position: relative;
+}
+.latest-row p {
+  color: #f4a261;
+  font-weight: bold;
+}
+.wfashion {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.wfashion img {
+  width: 100%;
+}
+.latest-wrap-2 {
+  background: #f1f6f9;
+}
+
+.latest-features {
+  height: 145px;
+  width: 100%;
+  position: relative;
+}
+
+.latest-features img {
+  height: 95%;
+  width: 100%;
+  padding: 10px;
+}
+
+.white {
+  background: white;
+  width: 100%;
+}
+
+.latest-features-detail {
+}
+
+.latest-features-detail p {
+  line-height: 6px;
+  padding-left: 10px;
+}
+.latest-features-detail p:nth-child(1) {
+  margin-top: 10px;
+  color: #373738;
+  font-size: 20px;
+}
+.latest-features-detail p:nth-child(2) {
+  color: #f4a261;
+}
+
+.row.white.rounded.features {
+  margin-left: 3px;
+  border-left: solid 5px #264653;
+}
+
+.footer-copyright {
+  background: #fdf0ed;
+}
+
+.footer {
+  height: 100px;
+}
+.feature-products {
+  background: #f1f6f9;
+}
+.feature-products h3 {
+  color: #250a04;
+}
+
+.icon-wrapper {
+  width: 100%;
+  position: relative;
+  top: 30px;
+}
+
+.icon-wrapper img {
+  width: 180px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+
+  padding: 20px;
+  height: 180px;
+}
+
+p.title {
+  font-weight: 900;
+  color: #264553;
+}
+.overlay-menu {
+  height: 100%;
+  width: 23.33%;
+  background: #82aeb1;
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  bottom: 0;
+  transition: 0.5s;
+  padding: 40px;
+  visibility: visible;
+}
+.overlay-menu-2 {
+  height: 100%;
+  width: 0%;
+  background: #82aeb1;
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  visibility: hidden;
+  left: -200px;
+
+  bottom: 0;
+  transition: 0.5s all;
+  padding: 40px;
+}
+.close-menu {
+  width: 100%;
+  position: relative;
+  height: 45px;
+}
+
+.close-menu i {
+  position: absolute;
+  left: 90%;
+}
+@media (max-width: 575.98px) {
+  .Hero {
+    height: 450px;
+    position: relative;
+    padding: 1em;
+  }
+  .intro {
+    position: initial;
+    width: 85%;
+    left: 50px;
+    bottom: 0px;
+  }
+  .show-pic {
+    position: initial;
+    width: 100%;
+    top: 10px;
+  }
+  .show-pic img {
+    width: 35%;
+  }
+  .latest-row {
+    background: white;
+    height: 110px;
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+  }
+  .row.white.rounded.features {
+    margin-left: 3px;
+    border-left: solid 5px #264653;
+    margin-top: 10px;
+  }
+  .latest-features {
+    height: 195px;
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+.dot {
+  height: 40px;
+  width: 40px;
+
+  border-radius: 50%;
+  display: inline-block;
+  margin: 3px;
+}
+.left-menu h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #264553;
+  margin-bottom: 10px;
+}
+
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@import url(https://fonts.googleapis.com/css?family=Oswald:300, 400);
+.snip1492 {
+  font-family: "Oswald", Arial, sans-serif;
+  position: relative;
+  margin: 10px;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  background: #ffffff;
+  text-align: center;
+  color: #000000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+}
+
+.snip1492 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: padding-box;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.snip1492 img {
+  max-width: 100%;
+  vertical-align: top;
+  position: relative;
+  background-color: #666666;
+  padding-top: 40px;
+}
+
+.snip1492 figcaption {
+  padding: 20px;
+}
+
+.snip1492 h3,
+.snip1492 p {
+  margin: 0;
+}
+
+.snip1492 h3 {
+  font-size: 1.3em;
+  font-weight: 400;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.snip1492 p {
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.snip1492 .price {
+  font-weight: 500;
+  font-size: 1.4em;
+  line-height: 48px;
+  letter-spacing: 1px;
+}
+
+.snip1492 .price s {
+  margin-right: 5px;
+  opacity: 0.5;
+  font-size: 0.9em;
+}
+
+.snip1492 i {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+  width: 56px;
+  line-height: 56px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #666666;
+  color: #ffffff;
+  font-size: 36px;
+}
+
+.snip1492 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.snip1492:hover i,
+.snip1492.hover i,
+.snip1492:hover img,
+.snip1492.hover img {
+  background-color: #2980b9;
+}
+
+.snip1492:hover i,
+.snip1492.hover i {
+  -webkit-transform: translate(-50%, 5px);
+  transform: translate(-50%, 5px);
+}
+
+.MuiPaper-root.MuiCard-root.makeStyles-root-1.MuiPaper-elevation1.MuiPaper-rounded {
+  box-shadow: none;
+  border: solid 1px #eee;
+  width: 250px;
+}
+@import "~react-image-gallery/styles/css/image-gallery.css";
