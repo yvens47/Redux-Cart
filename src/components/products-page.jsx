@@ -8,10 +8,11 @@ import NavbarMain from "./commons/navbar-main";
 import SelectOtion from "./commons/select-option";
 import queryString from "query-string";
 import { withRouter } from "react-router-dom";
+import Footer from "./commons/footer";
 class Products extends Component {
   state = {
     time: "",
-    isMenuOpened: false,
+
     width: "0%",
     filter: "all"
   };
@@ -29,14 +30,6 @@ class Products extends Component {
     });
   };
 
-  handleAddToCart = product => {
-    this.props.dispatch({ type: "ADD_TO_CART", payload: product });
-    this.props.dispatch({ type: "GET_TOTALS_CART", payload: { total: 0 } });
-    const cart = JSON.stringify(this.props.cart);
-
-    localStorage.setItem("cart", cart);
-  };
-
   handleChangeFilter = ({ currentTarget }) => {
     this.setState({ filter: currentTarget.value });
   };
@@ -44,7 +37,6 @@ class Products extends Component {
   render() {
     return (
       <React.Fragment>
-        {/* <PrimaryNavbar  /> */}
         <NavbarMain show={this.handleShowMenu} cart={this.props.cart} />
 
         <div className="container-fluid ">
@@ -133,7 +125,7 @@ class Products extends Component {
                   ? this.props.products.map(product => (
                       <ProductCard
                         product={product}
-                        handleAddToCart={this.handleAddToCart}
+                        handleAddToCart={this.props.addToCart}
                       />
                     ))
                   : this.props.products &&
@@ -149,6 +141,7 @@ class Products extends Component {
             </div>
           </div>
         </div>
+        <Footer />
       </React.Fragment>
     );
   }

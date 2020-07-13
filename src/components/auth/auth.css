@@ -1,0 +1,37 @@
+.login {
+  border: solid 1px #eee;
+  padding: 10px;
+  background: #ffffff;
+}
+
+.login_wrapper {
+  min-height: 100vh;
+  background: aliceblue;
+}
+
+.MuiButton-containedPrimary {
+  color: #fff;
+  background-color: var(--primary);
+  display: block;
+  width: 100%;
+}
+.MuiButton-containedPrimary {
+  color: #fff;
+  background-color: #057bff;
+}
+
+.MuiButton-contained {
+  color: rgba(0, 0, 0, 0.87);
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  background-color: #fffefe;
+  display: block;
+  width: 100%;
+}
+.login i {
+  font-size: 20px;
+}
+.login input {
+  background: #f5f5f5;
+  border: none;
+}

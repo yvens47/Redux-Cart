@@ -19,6 +19,7 @@ export function cartReducer(state = [], action) {
       const copyState = { ...state };
       // check to see if product is already added to cart
       const product = { ...action.payload };
+      console.log("cartReducer", action.payload);
       let position = indexOfProduct(product, copyState.items);
       if (position === null) {
         //addItem(product, copyState);

@@ -273,8 +273,11 @@ span.like {
   position: relative;
 }
 .latest-row p {
-  color: #f4a261;
+  color: #bbbbbb;
   font-weight: bold;
+}
+.latest-features-detail p:nth-child(2) {
+  color: #bbbbbb;
 }
 .wfashion {
   width: 100%;
@@ -290,7 +293,7 @@ span.like {
 }
 
 .latest-features {
-  height: 145px;
+  height: 240px;
   width: 100%;
   position: relative;
 }
@@ -300,7 +303,26 @@ span.like {
   width: 100%;
   padding: 10px;
 }
+.latest-features-detail {
+  background: #7baead;
+  border: solid 1px #7ba59ead;
+  position: absolute;
+  width: 96%;
+  top: 0;
+  height: 92%;
+  transition: 1s all;
+  padding: 10px;
+  display: none;
+  color: white;
+}
 
+.latest-features {
+  transition: 3s all;
+}
+.latest-features:hover .latest-features-detail {
+  display: block;
+  trasition: 4s all;
+}
 .white {
   background: white;
   width: 100%;
@@ -310,8 +332,8 @@ span.like {
 }
 
 .latest-features-detail p {
-  line-height: 6px;
   padding-left: 10px;
+  color: white;
 }
 .latest-features-detail p:nth-child(1) {
   margin-top: 10px;
@@ -319,12 +341,13 @@ span.like {
   font-size: 20px;
 }
 .latest-features-detail p:nth-child(2) {
-  color: #f4a261;
+  color: #bbbbbb;
 }
 
 .row.white.rounded.features {
   margin-left: 3px;
   border-left: solid 5px #264653;
+  height: 280px;
 }
 
 .footer-copyright {
@@ -360,6 +383,10 @@ span.like {
 p.title {
   font-weight: 900;
   color: #264553;
+  font-family: "Yeseva One", cursive;
+}
+.header h1 {
+  font-family: "Yeseva One", cursive;
 }
 .overlay-menu {
   height: 100%;
@@ -431,7 +458,7 @@ p.title {
     margin-top: 10px;
   }
   .latest-features {
-    height: 195px;
+    height: 270px;
     width: 100%;
     position: relative;
     margin-top: 20px;
@@ -563,3 +590,111 @@ p.title {
   width: 250px;
 }
 @import "~react-image-gallery/styles/css/image-gallery.css";
+
+.colors span {
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  margin: 2px;
+  padding: 5px;
+}
+.MuiAvatar-root.MuiAvatar-circle {
+  width: 60px;
+  height: 60px;
+  margin: 3px 10px;
+}
+.sizes div {
+  height: 45px;
+  width: 45px;
+}
+
+p.single.size span {
+  color: #4b4c4b;
+
+  font-size: 20px;
+  margin-left: 10px;
+}
+.cate {
+  font-family: "Yeseva One", cursive;
+  color: #7d7d7d;
+}
+.single-price {
+  font-family: "Yeseva One", cursive;
+  float: right;
+  font-size: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.description h2 {
+  font-family: "Yeseva One", cursive;
+}
+
+.description p {
+  font-family: "Roboto", sans-serif;
+}
+
+.similar-products h2 {
+  font-family: "Yeseva One", cursive;
+}
+.cate {
+  font-family: "Yeseva One", cursive;
+}
+.reviews h2 {
+  font-family: "Yeseva One", cursive;
+}
+
+.single-pname {
+  color: #717171;
+  font-size: 22px;
+}
+.single,
+.color,
+.size,
+.sizes {
+  font-family: "Lora", serif;
+}
+.colors span {
+  border: solid 1px #eee;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 250px;
+}
+.carousel-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.active-size {
+  background: lightgrey;
+}
+.sizes {
+  height: 50px;
+}
+.sizes div {
+  margin: 3px;
+}
+
+.product_image {
+  width: 100%;
+  height: 250px;
+  position: relative;
+}
+.product_image img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -20px;
+  left: 0;
+}

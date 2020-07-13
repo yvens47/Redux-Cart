@@ -1,8 +1,12 @@
-import { createStore, combineReducers } from "redux";
-import productReducer from "./Reducers/ProductReducer";
-import { cartReducer } from "./Reducers/cartReducers";
+import { createStore, applyMiddleware, combineReducers, compose } from "redux";
 
-import { auctionReducer } from "./Reducers/aution-reducers";
+import reduxThunk from "redux-thunk";
+import rootReducer from "../store/Reducers/rootReducers";
+import firebase from "../utils/firebase";
+//import { reactReduxFirebase, getFirebase } from "react-redux-firebase";
+import { reduxFirestore, getFirestore } from "redux-firestore";
+import { ReactReduxFirebaseProvider, getFirebase } from "react-redux-firebase";
+import { createFirestoreInstance } from "redux-firestore";
 
 const initialState = {
   products: [
@@ -181,14 +185,21 @@ const initialState = {
   }
 };
 
+const rfConfig = {
+  userProfile: "users",
+  useFirestoreForProfile: true // Firestore for Profile instead of Realtime DB
+}; // optional redux-firestore Config Options
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
-  combineReducers({
-    products: productReducer,
-    cart: cartReducer,
-    auction: auctionReducer
-  }),
+  rootReducer,
   initialState,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  composeEnhancers(
+    applyMiddleware(
+      reduxThunk.withExtraArgument({ getFirebase, getFirestore })
+    ),
+    reduxFirestore(rfConfig)
+  )
 );
 
 export default store;

@@ -1,15 +1,11 @@
 import React, { Component } from "react";
-import ProductCard from "./product-card";
+import ProductCard from "../product-card";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
-import { cartReducer } from "../store/Reducers/cartReducers";
+import { cartReducer } from "../../store/Reducers/cartReducers";
 import CartItem from "./cart-item";
 import { Link } from "react-router-dom";
 class Cart extends Component {
-  //   handleAddToCart = product => {
-  //     this.props.dispatch({ type: "ADD_TO_CART", payload: product });
-  //   };
-
   render() {
     return (
       <React.Fragment>

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 const SelectOtion = ({ options, event }) => {
   return (
     <select class="form-control" onChange={event}>

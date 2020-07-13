@@ -1,11 +1,13 @@
 import React, { Component } from "react";
-import ProductCard from "./product-card";
-import { cartReducer } from "../store/Reducers/cartReducers";
+import ProductCard from "../product-card";
+import { cartReducer } from "../../store/Reducers/cartReducers";
 import Cart from "./cart";
 import { connect } from "react-redux";
-import NavbarMain from "./commons/navbar-main";
-import Checkout from "./checkout";
+import NavbarMain from "../commons/navbar-main";
+//import Checkout from "./cart/checkout";
 import { loadStripe } from "@stripe/stripe-js";
+
+import { Link } from "react-router-dom";
 
 class CartPage extends Component {
   state = {};
@@ -63,7 +65,7 @@ class CartPage extends Component {
                   <div class="container">
                     <div className="row subtotal">
                       <div className="col">Subtotal</div>
-                      <div className="col">$59</div>
+                      <div className="col">{this.props.cart.totals}</div>
                     </div>
                     <div className="row shipping">
                       <div className="col">Delivery</div>
@@ -75,9 +77,12 @@ class CartPage extends Component {
                     </div>
                     <div className="row">
                       <div className="col">
-                        <button className="btn btn-info btn-block border-0 rounded-0">
+                        <Link
+                          to="/store/checkout"
+                          className="btn btn-info btn-block border-0 rounded-0"
+                        >
                           Procceed to checkout
-                        </button>
+                        </Link>
                       </div>
                     </div>
                   </div>

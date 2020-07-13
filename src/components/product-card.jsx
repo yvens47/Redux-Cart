@@ -44,33 +44,23 @@ export default function ProductCard(props) {
 
   return (
     <Card className={classes.root}>
-      <Link
-        to={{
-          pathname: `/store/product/${props.product._id} `,
-
-          state: { productId: props.product._id }
-        }}
-      >
-        <CardMedia
+      {/* <CardMedia
           className={classes.media}
           image={props.product.defaultImage}
           title="Paella dish"
           component="image"
-        />
-      </Link>
+        /> */}
+      <div className="product_image">
+        <a href={`/store/product/${props.product._id} `}>
+          <img src={props.product.defaultImage} />
+        </a>
+      </div>
 
       <CardContent>
         <Typography variant="body1" color="textPrimary" component="p">
-          <Link
-            color="inherit"
-            to={{
-              pathname: `/store/product/${props.product._id} `,
-
-              state: { productId: props.product._id }
-            }}
-          >
+          <a href={`/store/product/${props.product._id} `}>
             {props.product.name}
-          </Link>
+          </a>
         </Typography>
         <Typography variant="body2" color="textSecondary" component="p">
           {props.product.price}

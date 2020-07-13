@@ -1,23 +1,21 @@
-import React, { Component } from "react";
+import React from "react";
 import Badge from "@material-ui/core/Badge";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import IconButton from "@material-ui/core/IconButton";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 
+import { connect } from "react-redux";
+import { signOut } from "../../store/actionsCreator/auth";
+
 import { Link, withRouter } from "react-router-dom";
 const NavbarMain = props => {
+  const signOut = e => {
+    e.preventDefault();
+
+    props.signOut();
+  };
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-light-primary">
-      {props.match.path == "/store" && (
-        <Link
-          onClick={props.show}
-          onAnimationEnd={() => this.setState({ fade: false })}
-          className="navbar-brand"
-          href="#"
-        >
-          <i class="fas fa-bars"></i>
-        </Link>
-      )}
       <Link className="navbar-brand" href="#">
         Navbar
       </Link>
@@ -74,46 +72,67 @@ const NavbarMain = props => {
               </IconButton>
             </Link>
           </li>
-          <li className="nav-item">
-            <Link to="/account">
-              <IconButton
-                aria-label="account of current user"
-                aria-controls="primary-search-account-menu"
+          {!props.uid && (
+            <>
+              <li className="nav-item">
+                <Link className="nav-link" to="/register">
+                  Register
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/login">
+                  Signin
+                </Link>
+              </li>
+            </>
+          )}
+
+          {props.uid && (
+            <li className="nav-item dropdown">
+              <Link
+                className="nav-link dropdown-toggle"
+                to="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
                 aria-haspopup="true"
-                color="inherit"
+                aria-expanded="false"
               >
-                <AccountCircle />
-              </IconButton>
-            </Link>
-          </li>
-          {/* <li className="nav-item dropdown">
-            <a
-              className="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              {" "}
-              Dropdown on Right
-            </Link>
-            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a className="dropdown-item" href="#">
-                Action
+                Welcome,User
               </Link>
-              <a className="dropdown-item" href="#">
-                Another action with a lot of text inside of an item
-              </Link>
-            </div>
-          </li>
-       
-        */}
+              <div
+                className="dropdown-menu dropdown-menu-right"
+                aria-labelledby="navbarDropdown"
+              >
+                <Link className="dropdown-item" to="#">
+                  Action
+                </Link>
+                <div class="dropdown-divider"></div>
+
+                <Link className="dropdown-item" onClick={signOut} to="/signout">
+                  <i class="fas fa-power-off mr-1"></i>signout
+                </Link>
+              </div>
+            </li>
+          )}
         </ul>
       </div>
     </nav>
   );
 };
+const mapDispatchToProps = dispatch => {
+  return {
+    signOut: credentials => dispatch(signOut())
+  };
+};
 
-export default withRouter(NavbarMain);
+const mapStateToProps = state => {
+  const { uid, displayName } = state.firebase.auth;
+  return {
+    uid,
+    displayName
+  };
+};
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(NavbarMain)
+);

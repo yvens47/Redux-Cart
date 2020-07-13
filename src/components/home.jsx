@@ -19,8 +19,15 @@ class HomePage extends Component {
   render() {
     return (
       <div className="homepage">
-        <NavbarMain cart={this.props.cart} />
-        <div className="container-fluid">
+        <div className="container p-0">
+          <div className="row">
+            <div className="col-md-12">
+              <NavbarMain cart={this.props.cart} />
+            </div>
+          </div>
+        </div>
+
+        <div className="container">
           <div className="row">
             <div className="col-md-12 p-0">
               <div className="Hero">
@@ -77,9 +84,9 @@ class HomePage extends Component {
           </div>
         </div>
 
-        <div className="container-fluid">
+        <div className="container">
           <div className="row feature-products pt-5 pb-4">
-            <div className="col-md-10 m-auto">
+            <div className="col-md-12 m-auto">
               <h3 className="text-center pt-3 pb-3 ">Latest Products</h3>
 
               <div className="row">
@@ -93,100 +100,67 @@ class HomePage extends Component {
           </div>
 
           <div className="row latest-wrap-2 pt-5 pb-5">
-            <div className="col col-12 col-sm-6  ">
-              <div className="row">
-                <div className="col-sm-6">
-                  <div className="latest-wraper">
-                    <img
-                      className="rounded"
-                      src="https://images.pexels.com/photos/974964/pexels-photo-974964.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                    />
-                  </div>
-                </div>
-                <div className="col-sm-6">
-                  <div className="row">
-                    <div className="col-sm-12 ">
-                      <div className="latest-row border rounded mb-1 p-1">
-                        <p>Women's Fashion</p>
-                        <div className="row">
-                          <div className="col wfashion">
-                            <img
-                              className="rounded"
-                              src="https://images.pexels.com/photos/974964/pexels-photo-974964.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                            />
-                          </div>
-                          <div className="col  wfashion">
-                            <img
-                              className="rounded"
-                              src="https://images.pexels.com/photos/974964/pexels-photo-974964.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                            />
-                          </div>
-                          <div className="col wfashion">
-                            <img
-                              className="rounded"
-                              src="https://images.pexels.com/photos/974964/pexels-photo-974964.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-sm-12 ">
-                      <div className="latest-row border rounded mb-1 p-1">
-                        <p>Women's Fashion</p>
-                        <div className="row">
-                          <div className="col wfashion">
-                            <img
-                              className="rounded"
-                              src="https://images.pexels.com/photos/974964/pexels-photo-974964.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                            />
-                          </div>
-                          <div className="col p-0 wfashion">
-                            <img
-                              className="rounded"
-                              src="https://images.pexels.com/photos/974964/pexels-photo-974964.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                            />
-                          </div>
-                          <div className="col wfashion">
-                            <img
-                              className="rounded"
-                              src="https://images.pexels.com/photos/974964/pexels-photo-974964.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
             <div className="col col-12 col-sm-6 ">
               <div className="row white rounded features">
                 <div className="col-sm-12">Features</div>
                 <div className="col col-12 col-sm-6  ">
                   <div className="latest-features">
                     <img src="https://images.pexels.com/photos/974964/pexels-photo-974964.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
-                  </div>
-                  <div className="latest-features-detail">
-                    <p>Lorem ipsum</p>
-                    <p>Lorem ipsum</p>
+                    <div className="latest-features-detail">
+                      <p>Lorem ipsum</p>
+                      <p>Lorem ipsum</p>
+                    </div>
                   </div>
                 </div>
 
                 <div className="col">
                   <div className="latest-features">
                     <img src="https://images.pexels.com/photos/318236/pexels-photo-318236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+
+                    <div className="latest-features-detail">
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Possimus.
+                      </p>
+                      <p>
+                        <a className="btn btn-primary" href="#">
+                          more
+                        </a>
+                      </p>
+                    </div>
                   </div>
-                  <div className="latest-features-detail">
-                    <p>Lorem ipsum</p>
-                    <p>Lorem ipsum</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="col col-12 col-sm-6 ">
+              <div className="row white rounded features">
+                <div className="col-sm-12">Features</div>
+
+                <div className="col">
+                  <div className="latest-features">
+                    {/* <img src="https://images.pexels.com/photos/318236/pexels-photo-318236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" /> */}
+                    <SlideShow
+                      photos={[
+                        "https://images.unsplash.com/photo-1515776660074-a40fda5db287?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+                        "https://images.unsplash.com/photo-1518002171953-a080ee817e1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+                        "https://images.unsplash.com/photo-1592500553342-38a28890c03b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                      ]}
+                    />
                   </div>
+                  {/* <div className="latest-features-detail">
+                    <p>Lorem ipsum</p>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    </p>
+                  </div> */}
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="container-fluid">
+        <div className="container">
           <div className="row subscribe">
             <div className="col-md-6 p-5">
               <h1>Lorem ipsum dolor sit amet</h1>
